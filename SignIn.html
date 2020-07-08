@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign In</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+h3{
+  /* Style for "TASWEET-X" */
+width: 240px;
+height: 45px;
+color: #43425d;
+font-family: "Source Sans Pro";
+font-size: 25px;
+font-weight: 700;
+letter-spacing: 7px;
+line-height: 21px;
+text-transform: uppercase;
+/* Text style for "TASWEET-X" */
+text-decoration: underline;
+}
+
+p{
+  /* Style for "Welcome back...." */
+width: 340px;
+height: 23px;
+opacity: 0.5;
+color: #4d4f5c;
+font-family: "Source Sans Pro";
+font-size: 15px;
+font-weight: 400;
+line-height: 13px;
+}
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #e9e9f0;
+   -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input[type=text]:focus, input[type=password]:focus{
+   border-bottom: 2px solid #555;
+}
+.button
+{
+/* Style for "Login" */
+width: 185px;
+height: 50px;
+border-radius: 4px;
+border: 1px solid #43425d;
+background-color: #43425d;
+color: #ffffff;
+font-family: "Source Sans Pro";
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Source Sans Pro";
+  text-align: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 50;
+  left: 100;
+  right: 100;
+  height: 18px;
+  width: 18px;
+  border-radius: 4px;
+  border: 1px solid #808495;
+  background-color: #ffffff;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #f0f0f7;
+   border: 1px solid #43425d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 11px;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
+  transform: rotate(41deg);
+}
+b{
+  /* Style for "Remember m" */
+width: 92px;
+height: 25px;
+color: #43425d;
+font-family: "Source Sans Pro";
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+}
+
+
+::placeholder{
+  color: #43425d;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  /*  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: auto;
+    width: auto;
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column">
+    <img src="image/wallpaper.png" alt="Tasweet-X Wallpaper" style="float:left;width:100%;height:100%;object-fit:cover;">
+  </div>
+
+  <div class="column">
+    <br>
+    <br>
+    <center>
+    <h3>TASWEET-X</h3>
+    <form>
+      <p>Welcome back! Please login to your account.</p>
+     <input type="text" placeholder="Username"><br/>
+     <input type="password" placeholder="Password"><br/>
+      <br>
+      <br>
+      <label class="container">
+      <input type="checkbox">
+      <span class="checkmark"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>Remember Me</b>
+      </label>
+    <a href="StartElections.html"> <input type="button" class="button" value=Login target="_blank"></a>
+
+    </form>
+    </center>
+  </div>
+</div>
+</body>
+</html>
